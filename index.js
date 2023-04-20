@@ -18,7 +18,17 @@ const fs = require('fs');
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
 // ```
+//Apache,
+// MIT,
+// BSD and
+// Unlicense.
 const questions = [
+    {
+        type:"list",
+        message: "What license are you using fo this project?",
+        choices: ['MIT','Apache','BSD','Unlicense','Other','None'],
+        name:"license"
+      },
   {
     type: "input",
     message: "What is the title of your project?",
@@ -65,6 +75,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+    console.log(generateMD);
     inquirer.prompt(questions)
     .then((data)=>{
        const generatedMD = generateMD(data);
