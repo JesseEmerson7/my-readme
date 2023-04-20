@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const generateMD = require("./utils/generateMarkdown");
-const fs = require('fs');
+const fs = require("fs");
 
 // TODO: Create an array of questions for user input
 
@@ -23,12 +23,12 @@ const fs = require('fs');
 // BSD and
 // Unlicense.
 const questions = [
-    {
-        type:"list",
-        message: "What license are you using fo this project?",
-        choices: ['MIT','Apache','BSD','Unlicense','Other','None'],
-        name:"license"
-      },
+  {
+    type: "list",
+    message: "What license are you using fo this project?",
+    choices: ["MIT", "Apache", "BSD", "Unlicense", "Other", "None"],
+    name: "license",
+  },
   {
     type: "input",
     message: "What is the title of your project?",
@@ -63,24 +63,23 @@ const questions = [
     type: "input",
     message: "How would someone test this project?",
     name: "test",
-  }
+  },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName,data,(err)=>{
-        if(err) throw err;
-    });
-};
+  fs.writeFile(fileName, data, (err) => {
+    if (err) throw err;
+  });
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    console.log(generateMD);
-    inquirer.prompt(questions)
-    .then((data)=>{
-       const generatedMD = generateMD(data);
-       writeToFile('README.md',generatedMD);
-    })
+  console.log(generateMD);
+  inquirer.prompt(questions).then((data) => {
+    const generatedMD = generateMD(data);
+    writeToFile("README.md", generatedMD);
+  });
 }
 
 // Function call to initialize app

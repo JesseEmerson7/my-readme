@@ -26,12 +26,11 @@ function renderLicenseLink(license) {
       return "";
       break;
 
-      case 'None':
-        return '';
-        break;
+    case "None":
+      return "";
+      break;
   }
   return license;
-  
 }
 
 // TODO: Create a function that returns the license section of README
@@ -47,11 +46,12 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  
   ## Description
   
  ${data.desc}
   
+ ${renderLicenseBadge(data.license)}
   ## Table of Contents
   
   - [Installation](#installation)
@@ -70,8 +70,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ${renderLicenseSection(data.license)}
-
-${renderLicenseLink(data.license)}
+  ${renderLicenseLink(data.license)}
 
   ## How to Contribute
   
