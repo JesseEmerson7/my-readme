@@ -24,12 +24,6 @@ const fs = require("fs");
 // Unlicense.
 const questions = [
   {
-    type: "list",
-    message: "What license are you using fo this project?",
-    choices: ["MIT", "Apache", "BSD", "Unlicense", "Other", "None"],
-    name: "license",
-  },
-  {
     type: "input",
     message: "What is the title of your project?",
     name: "title",
@@ -56,6 +50,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "What is your Github username?",
+    name: "github",
+  },
+  {
+    type: "input",
     message: "What are some contribution guidelines for this project?",
     name: "contribute",
   },
@@ -64,6 +63,12 @@ const questions = [
     message: "How would someone test this project?",
     name: "test",
   },
+  {
+    type: "list",
+    message: "What license are you using fo this project?",
+    choices: ["MIT", "Apache", "BSD", "Unlicense", "Other", "None"],
+    name: "license",
+  }
 ];
 
 // TODO: Create a function to write README file
