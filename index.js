@@ -50,14 +50,16 @@ const questions = [
     message: "What license are you using fo this project?",
     choices: ["MIT", "Apache", "BSD", "Unlicense", "Other", "None"],
     name: "license",
-  }
+  },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) throw err;
-    else{console.log('Success! Your README.md file has been created')};
+    else {
+      console.log("Success! Your my-README.md file has been created");
+    }
   });
 }
 
@@ -65,7 +67,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((data) => {
     const generatedMD = generateMD(data);
-    writeToFile("README.md", generatedMD);
+    writeToFile("my-README.md", generatedMD);
   });
 }
 

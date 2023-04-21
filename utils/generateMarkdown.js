@@ -73,7 +73,7 @@ ${data.contribute}
 
  please <a href="mailto:${
    data.Email
- }">email me</a> about any questions regarding this project. Please Inform me of which repository you are referring to and I can get back to you as soon as possible.
+ }">email me</a> about any questions regarding this project. Feel free to Inform me of which repository you are referring to and I can get back to you as soon as possible.
 
  ${renderLicenseSection(data.license)}
  
