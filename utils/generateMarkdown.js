@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  //if license is the none or other option it returns empty
   if (license == "None" || license == "Other") {
     return "";
   } else {
@@ -11,6 +12,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  //link in the table of contents returns empty if no license
   if (license == "None") {
     return "";
   } else {
@@ -21,6 +23,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  //renders the section ## license if a license is selected. if none it is empty
   if (license == "None") {
     return "";
   } else if (license == "Other") {

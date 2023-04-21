@@ -4,6 +4,7 @@ const generateMD = require("./utils/generateMarkdown");
 const fs = require("fs");
 
 // TODO: Create an array of questions for user input
+//questions prompted after using node index.js in terminal
 const questions = [
   {
     type: "input",
@@ -58,6 +59,7 @@ function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) throw err;
     else {
+      //logs this message once the file has been created
       console.log("Success! Your my-README.md file has been created");
     }
   });
