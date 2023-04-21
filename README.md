@@ -20,7 +20,7 @@
   
   ## Usage
   
-  To use this project you can type "node index.js" into the command line and you will be prompted with a number of questions. Type in answers for each and select a license used. A README.md file will be generated with all the answer information.
+  To use this project you can type "node index.js" into the command line and you will be prompted with a number of questions. Type in answers for each and select a license used. A my-README.md file will be generated with all the answer information.
 
   ## How to Contribute
   
